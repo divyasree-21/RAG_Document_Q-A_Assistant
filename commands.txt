@@ -1,0 +1,13 @@
+python -m venv .venv
+
+.\.venv\Scripts\Activate.ps1
+
+python -m pip install --upgrade pip
+
+pip install streamlit pymupdf sentence-transformers faiss-cpu python-dotenv
+
+python -c "import streamlit, fitz, sentence_transformers, faiss; print('All libraries installed successfully!')"
+
+python document_processor.py
+
+python retriever.py
